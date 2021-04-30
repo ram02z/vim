@@ -64,8 +64,12 @@ if has('nvim-0.5')
     hi! link GitSignsDeleteNr DiffDelete
   endif
   if luaeval("pcall(require, 'bufferline')")
+    hi BufferDraculaBg guibg=DraculaBgDark
     hi! link BufferLineIndicatorSelected DraculaPink
-    hi! link BufferLineFill DraculaBg
+    hi! link BufferLineFill BufferDraculaBg
+    hi! link BufferLineBackground BufferDraculaBg
+    hi! link BufferlinePickSelected DraculaRed
+    hi! link BufferlinePickVisible DraculaRed
   endif   
   if luaeval("pcall(require, 'hop')")
     hi! link HopUnmatched DraculaComment
