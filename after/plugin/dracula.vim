@@ -47,18 +47,32 @@ if exists('g:loaded_gitgutter')
   hi! link GitGutterChange DiffChange
   hi! link GitGutterDelete DiffDelete
 endif
-if has('nvim-0.5') && luaeval("pcall(require, 'gitsigns')")
-  " https://github.com/lewis6991/gitsigns.nvim requires nvim > 0.5
-  " has('nvim-0.5') checks >= 0.5, so this should be future-proof.
-  hi! link GitSignsAdd      DiffAdd
-  hi! link GitSignsAddLn    DiffAdd
-  hi! link GitSignsAddNr    DiffAdd
-  hi! link GitSignsChange   DiffChange
-  hi! link GitSignsChangeLn DiffChange
-  hi! link GitSignsChangeNr DiffChange
-  hi! link GitSignsDelete   DiffDelete
-  hi! link GitSignsDeleteLn DiffDelete
-  hi! link GitSignsDeleteNr DiffDelete
+
+" Neovim >=0.5 plugins
+if has('nvim-0.5') 
+  if luaeval("pcall(require, 'gitsigns')")
+    " https://github.com/lewis6991/gitsigns.nvim requires nvim > 0.5
+    " has('nvim-0.5') checks >= 0.5, so this should be future-proof.
+    hi! link GitSignsAdd      DiffAdd
+    hi! link GitSignsAddLn    DiffAdd
+    hi! link GitSignsAddNr    DiffAdd
+    hi! link GitSignsChange   DiffChange
+    hi! link GitSignsChangeLn DiffChange
+    hi! link GitSignsChangeNr DiffChange
+    hi! link GitSignsDelete   DiffDelete
+    hi! link GitSignsDeleteLn DiffDelete
+    hi! link GitSignsDeleteNr DiffDelete
+  endif
+  if luaeval("pcall(require, 'bufferline')")
+    hi! link BufferLineIndicatorSelected DraculaPink
+    hi! link BufferLineFill DraculaBg
+  endif   
+  if luaeval("pcall(require, 'hop')")
+    hi! link HopUnmatched DraculaComment
+  endif
+  if luaeval("pcall(require, 'telescope')")
+    hi! link TelescopeBorder DraculaPurple
+  endif
 endif
 " }}}
 " Tree-sitter: {{{
