@@ -48,6 +48,10 @@ if exists('g:loaded_gitgutter')
   hi! link GitGutterDelete DiffDelete
 endif
 
+if exists('g:indent_blankline_show_current_context')
+  hi! link IndentBlanklineContextChar Comment
+ endif
+
 " Neovim >=0.5 plugins
 if has('nvim-0.5') 
   if luaeval("pcall(require, 'gitsigns')")
