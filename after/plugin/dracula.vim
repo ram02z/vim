@@ -57,10 +57,10 @@ if has('nvim-0.5')
   hi! link GitSignsAdd      DiffAdd
   hi! link GitSignsChange   DiffChange
   hi! link GitSignsDelete   DiffDelete
-  " Nvim-bufferline.lua
-  hi! link BufferLineIndicatorSelected DraculaPink
-  hi! link BufferlinePickSelected DraculaRed
-  hi! link BufferlinePickVisible DraculaRed
+  " Nvim-bufferline.lua (don't get loaded when lazy)
+  " hi! link BufferLineIndicatorSelected DraculaPink
+  " hi! link BufferlinePickSelected DraculaRed
+  " hi! link BufferlinePickVisible DraculaRed
   " Hop.nvim
   hi! link HopUnmatched DraculaComment
   " Telescope.nvim
