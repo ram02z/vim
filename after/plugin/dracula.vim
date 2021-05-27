@@ -55,14 +55,8 @@ if has('nvim-0.5')
   hi! link IndentBlanklineContextChar Comment
   " Gitsigns
   hi! link GitSignsAdd      DiffAdd
-  hi! link GitSignsAddLn    DiffAdd
-  hi! link GitSignsAddNr    DiffAdd
   hi! link GitSignsChange   DiffChange
-  hi! link GitSignsChangeLn DiffChange
-  hi! link GitSignsChangeNr DiffChange
   hi! link GitSignsDelete   DiffDelete
-  hi! link GitSignsDeleteLn DiffDelete
-  hi! link GitSignsDeleteNr DiffDelete
   " Nvim-bufferline.lua
   hi! link BufferLineIndicatorSelected DraculaPink
   hi! link BufferlinePickSelected DraculaRed
@@ -97,6 +91,8 @@ if has('nvim-0.5')
   hi! link TSTitle DraculaYellow
   hi! link TSLiteral DraculaYellow
   hi! link TSURI DraculaYellow
+  " # Context
+  hi! link TreesitterContext DraculaBgLighter
 endif
 " }}}
 
