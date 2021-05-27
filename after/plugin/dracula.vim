@@ -48,12 +48,10 @@ if exists('g:loaded_gitgutter')
   hi! link GitGutterDelete DiffDelete
 endif
 
-if exists('g:indent_blankline_show_current_context')
-  hi! link IndentBlanklineContextChar Comment
- endif
+hi! link IndentBlanklineContextChar Comment
 
 " Neovim >=0.5 plugins
-if has('nvim-0.5') 
+if has('nvim-0.5')
   if luaeval("pcall(require, 'gitsigns')")
     " https://github.com/lewis6991/gitsigns.nvim requires nvim > 0.5
     " has('nvim-0.5') checks >= 0.5, so this should be future-proof.
@@ -71,7 +69,7 @@ if has('nvim-0.5')
     hi! link BufferLineIndicatorSelected DraculaPink
     hi! link BufferlinePickSelected DraculaRed
     hi! link BufferlinePickVisible DraculaRed
-  endif   
+  endif
   if luaeval("pcall(require, 'hop')")
     hi! link HopUnmatched DraculaComment
   endif
