@@ -93,6 +93,12 @@ if has('nvim-0.5')
   hi! link TSURI DraculaYellow
   " # Context
   hi! link TreesitterContext DraculaBgLighter
+  " # Vim-sandwich
+  highlight OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
+	highlight OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
+	highlight OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
+	highlight OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
+
 endif
 " }}}
 
