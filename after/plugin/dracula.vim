@@ -99,6 +99,8 @@ if has('nvim-0.5')
 	highlight OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
 	highlight OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
 
+  hi! link Visual CursorLine
+
 endif
 " }}}
 
