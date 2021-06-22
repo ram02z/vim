@@ -98,9 +98,14 @@ if has('nvim-0.5')
 	highlight OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
 	highlight OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
 	highlight OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
-
   " # Clever-f
   highlight CleverFDefaultLabel guifg='#ff007c' guibg=NONE gui=bold ctermfg=162 cterm=NONE
+  " # vim-matchup
+  hi! link MatchParen Comment
+  hi! link MatchParenCur Comment
+  hi! link MatchWord CursorLine
+  hi! link MatchWordCur CursorLine
+
 
   hi! link Visual CursorLine
 
