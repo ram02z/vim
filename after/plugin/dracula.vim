@@ -106,9 +106,6 @@ if has('nvim-0.5')
   hi! link MatchWord CursorLine
   hi! link MatchWordCur CursorLine
 
-
-  hi! link Visual CursorLine
-
 endif
 " }}}
 
