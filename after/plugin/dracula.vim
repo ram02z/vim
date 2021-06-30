@@ -67,6 +67,8 @@ if has('nvim-0.5')
   hi! link TelescopeBorder DraculaPurple
   " Treesitter
   hi! link TSPunctSpecial Special
+  hi! link TSDefinition CursorLine
+  hi! link TSDefinitionUsage CursorLine
   " # Constants
   hi! link TSConstMacro Macro
   hi! link TSStringEscape Character
@@ -94,12 +96,12 @@ if has('nvim-0.5')
   " # Context
   hi! link TreesitterContext DraculaBgLighter
   " # Vim-sandwich
-  highlight OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
-	highlight OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
-	highlight OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
-	highlight OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
+  hi! OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
+	hi! OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
+	hi! OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
+	hi! OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
   " # Clever-f
-  highlight CleverFDefaultLabel guifg='#ff007c' guibg=NONE gui=bold ctermfg=162 cterm=NONE
+  hi! CleverFDefaultLabel guifg='#ff007c' guibg=NONE gui=bold ctermfg=162 cterm=NONE
   " # vim-matchup
   hi! link MatchParen Comment
   hi! link MatchParenCur Comment
