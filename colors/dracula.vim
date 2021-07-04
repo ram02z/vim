@@ -189,7 +189,7 @@ call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
 
 call s:h('DraculaDiffChange', s:orange, s:none)
 call s:h('DraculaDiffText', s:bg, s:orange)
-call s:h('DraculaDiffDelete', s:red, s:bgdark)
+call s:h('DraculaDiffDelete', s:red, s:none)
 
 " }}}2
 
@@ -313,6 +313,68 @@ hi! link helpHyperTextJump DraculaLink
 hi! link helpCommand DraculaPurple
 hi! link helpExample DraculaGreen
 hi! link helpBacktick Special
+
+
+" My neovim >=0.5 plugins
+if has('nvim-0.5')
+  " IndentLine.nvim
+  hi! link IndentBlanklineContextChar Comment
+  " Gitsigns
+  hi! link GitSignsAdd      DiffAdd
+  hi! link GitSignsChange   DiffChange
+  hi! link GitSignsDelete   DiffDelete
+  " Nvim-bufferline.lua (don't get loaded when lazy)
+  " hi! link BufferLineIndicatorSelected DraculaPink
+  " hi! link BufferlinePickSelected DraculaRed
+  " hi! link BufferlinePickVisible DraculaRed
+  " Hop.nvim
+  hi! link HopUnmatched DraculaComment
+  " Telescope.nvim
+  hi! link TelescopeBorder DraculaPurple
+  " Treesitter
+  hi! link TSPunctSpecial Special
+  hi! link TSDefinition CursorLine
+  hi! link TSDefinitionUsage CursorLine
+  " # Constants
+  hi! link TSConstMacro Macro
+  hi! link TSStringEscape Character
+  hi! link TSSymbol DraculaPurple
+  hi! link TSAnnotation DraculaYellow
+  hi! link TSAttribute DraculaGreenItalic
+  " # Functions
+  hi! link TSFuncBuiltin DraculaCyan
+  hi! link TSFuncMacro Function
+  hi! link TSParameter DraculaOrangeItalic
+  hi! link TSParameterReference DraculaOrange
+  hi! link TSField DraculaOrange
+  hi! link TSConstructor DraculaCyan
+  " # Keywords
+  hi! link TSLabel DraculaPurpleItalic
+  " # Variable
+  hi! link TSVariableBuiltin DraculaPurpleItalic
+  " # Text
+  hi! link TSStrong DraculaFgBold
+  hi! link TSEmphasis DraculaFg
+  hi! link TSUnderline Underlined
+  hi! link TSTitle DraculaYellow
+  hi! link TSLiteral DraculaYellow
+  hi! link TSURI DraculaYellow
+  " # Context
+  hi! link TreesitterContext DraculaBgLighter
+  " # Vim-sandwich
+  hi! OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
+	hi! OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
+	hi! OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
+	hi! OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
+  " # Clever-f
+  hi! CleverFDefaultLabel guifg='#ff007c' guibg=NONE gui=bold ctermfg=162 cterm=NONE
+  " # vim-matchup
+  hi! link MatchParen Comment
+  hi! link MatchParenCur Comment
+  hi! link MatchWord CursorLine
+  hi! link MatchWordCur CursorLine
+
+endif
 
 "}}}
 
