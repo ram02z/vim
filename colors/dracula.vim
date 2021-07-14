@@ -182,8 +182,9 @@ call s:h('DraculaErrorLine', s:none, s:none, [s:attrs.undercurl], s:red)
 call s:h('DraculaWarnLine', s:none, s:none, [s:attrs.undercurl], s:orange)
 call s:h('DraculaInfoLine', s:none, s:none, [s:attrs.undercurl], s:cyan)
 
-call s:h('DraculaTodo', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('DraculaNote', s:cyan, s:none, [s:attrs.bold, s:attrs.inverse])
 call s:h('DraculaWarning', s:orange, s:none, [s:attrs.bold, s:attrs.inverse])
+call s:h('DraculaDanger', s:red, s:none, [s:attrs.bold, s:attrs.inverse])
 call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
 call s:h('DraculaBoundary', s:comment, s:bgdark)
 call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
@@ -222,6 +223,7 @@ hi! link ErrorMsg     DraculaRedInverse
 hi! link FoldColumn   DraculaSubtle
 hi! link Folded       DraculaBoundary
 hi! link IncSearch    DraculaOrangeInverse
+hi! link FloatBorder  DraculaPurple
 call s:h('LineNr', s:comment)
 hi! link MoreMsg      DraculaFgBold
 hi! link NonText      DraculaSubtle
@@ -331,11 +333,12 @@ if has('nvim-0.5')
   " Hop.nvim
   hi! link HopUnmatched DraculaComment
   " Telescope.nvim
-  hi! link TelescopeBorder DraculaPurple
+  hi! link TelescopeBorder FloatBorder
   " Treesitter
   hi! link TSPunctSpecial Special
   hi! link TSDefinition CursorLine
   hi! link TSDefinitionUsage CursorLine
+  hi! link TSPunctDelimiter DraculaPink
   " # Constants
   hi! link TSConstMacro Macro
   hi! link TSStringEscape Character
@@ -348,6 +351,7 @@ if has('nvim-0.5')
   hi! link TSParameter DraculaOrangeItalic
   hi! link TSParameterReference DraculaOrange
   hi! link TSField DraculaOrange
+  hi! link TSProperty DraculaOrange
   hi! link TSConstructor DraculaCyan
   " # Keywords
   hi! link TSLabel DraculaPurpleItalic
@@ -360,6 +364,9 @@ if has('nvim-0.5')
   hi! link TSTitle DraculaYellow
   hi! link TSLiteral DraculaYellow
   hi! link TSURI DraculaYellow
+  hi! link TSNote DraculaNote
+  hi! link TSWarning DraculaWarning
+  hi! link TSDanger DraculaDanger
   " # Context
   hi! link TreesitterContext DraculaBgLighter
   " # Vim-sandwich
