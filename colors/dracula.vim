@@ -270,7 +270,7 @@ endif
 
 hi! link Comment DraculaComment
 hi! link Underlined DraculaFgUnderline
-hi! link Todo DraculaTodo
+hi! link Todo DraculaNote
 
 hi! link Error DraculaError
 hi! link SpellBad DraculaErrorLine
@@ -364,8 +364,8 @@ if has('nvim-0.5')
   hi! link TSTitle DraculaYellow
   hi! link TSLiteral DraculaYellow
   hi! link TSURI DraculaYellow
-  hi! link TSNote DraculaNote
-  hi! link TSWarning DraculaWarning
+  hi! link TSNote DraculaWarning
+  hi! link TSWarning DraculaNote
   hi! link TSDanger DraculaDanger
   " # Context
   hi! link TreesitterContext DraculaBgLighter
