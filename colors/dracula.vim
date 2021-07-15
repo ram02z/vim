@@ -351,7 +351,6 @@ if has('nvim-0.5')
   hi! link TSParameter DraculaOrangeItalic
   hi! link TSParameterReference DraculaOrange
   hi! link TSField DraculaOrange
-  hi! link TSProperty DraculaOrange
   hi! link TSConstructor DraculaCyan
   " # Keywords
   hi! link TSLabel DraculaPurpleItalic
@@ -367,6 +366,8 @@ if has('nvim-0.5')
   hi! link TSNote DraculaWarning
   hi! link TSWarning DraculaNote
   hi! link TSDanger DraculaDanger
+  " # Language specific
+  hi! link tomlTSProperty DraculaOrange
   " # Context
   hi! link TreesitterContext DraculaBgLighter
   " # Vim-sandwich
