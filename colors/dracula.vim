@@ -38,6 +38,7 @@ let s:bglight   = g:dracula#palette.bglight
 let s:bg        = g:dracula#palette.bg
 let s:bgdark    = g:dracula#palette.bgdark
 let s:bgdarker  = g:dracula#palette.bgdarker
+let s:bgdarkest = g:dracula#palette.bgdarkest
 
 let s:comment   = g:dracula#palette.comment
 let s:selection = g:dracula#palette.selection
@@ -137,6 +138,7 @@ call s:h('DraculaBgLight', s:none, s:bglight)
 call s:h('DraculaBgLighter', s:none, s:bglighter)
 call s:h('DraculaBgDark', s:none, s:bgdark)
 call s:h('DraculaBgDarker', s:none, s:bgdarker)
+call s:h('DraculaBgDarkest', s:none, s:bgdarkest)
 
 call s:h('DraculaFg', s:fg)
 call s:h('DraculaFgUnderline', s:fg, s:none, [s:attrs.underline])
