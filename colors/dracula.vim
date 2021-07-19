@@ -384,6 +384,8 @@ if has('nvim-0.5')
   hi! link MatchParenCur Comment
   hi! link MatchWord CursorLine
   hi! link MatchWordCur CursorLine
+  " # nvim-bqf
+  hi! link BqfPreviewBorder FloatBorder
 
 endif
 
