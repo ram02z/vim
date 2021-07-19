@@ -226,7 +226,7 @@ hi! link FoldColumn   DraculaSubtle
 hi! link Folded       DraculaBoundary
 hi! link IncSearch    DraculaOrangeInverse
 hi! link FloatBorder  DraculaPurple
-call s:h('LineNr', s:comment)
+hi! link LineNr       DraculaComment
 hi! link MoreMsg      DraculaFgBold
 hi! link NonText      DraculaSubtle
 hi! link Pmenu        DraculaBgDark
@@ -235,7 +235,7 @@ hi! link PmenuSel     DraculaSelection
 hi! link PmenuThumb   DraculaSelection
 hi! link Question     DraculaFgBold
 hi! link Search       DraculaSearch
-call s:h('SignColumn', s:comment)
+hi! link SignColumn   DraculaComment
 hi! link TabLine      DraculaBoundary
 hi! link TabLineFill  DraculaBgDarker
 hi! link TabLineSel   Normal
@@ -248,9 +248,8 @@ hi! link WarningMsg   DraculaWarning
 " }}}
 " Syntax: {{{
 
-" Required as some plugins will overwrite
-call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
-call s:h('Conceal', s:cyan, s:none)
+hi! link Conceal DraculaCyan
+hi! link MatchParen Comment
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
@@ -380,7 +379,6 @@ if has('nvim-0.5')
   " # Clever-f
   hi! CleverFDefaultLabel guifg='#ff007c' guibg=NONE gui=bold ctermfg=162 cterm=NONE
   " # vim-matchup
-  hi! link MatchParen Comment
   hi! link MatchParenCur Comment
   hi! link MatchWord CursorLine
   hi! link MatchWordCur CursorLine
