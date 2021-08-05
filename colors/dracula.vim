@@ -355,6 +355,7 @@ if has('nvim-0.5')
   hi! link TSConstructor DraculaCyan
   " # Keywords
   hi! link TSLabel DraculaPurpleItalic
+  hi! link TSTagAttribute DraculaOrange
   " # Variable
   hi! link TSVariableBuiltin DraculaPurpleItalic
   " # Text
