@@ -369,6 +369,7 @@ if has('nvim-0.5')
   hi! link TSDanger DraculaDanger
   " # Language specific
   hi! link tomlTSProperty DraculaOrange
+  hi! link cssTSProperty DraculaOrange
   " # Context
   hi! link TreesitterContext DraculaBgLighter
   " # Vim-sandwich
