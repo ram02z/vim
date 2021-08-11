@@ -176,6 +176,7 @@ call s:h('DraculaRed', s:red)
 call s:h('DraculaRedInverse', s:fg, s:red)
 
 call s:h('DraculaYellow', s:yellow)
+call s:h('DraculaYellowUnderline', s:yellow, s:none, [s:attrs.underline])
 call s:h('DraculaYellowItalic', s:yellow, s:none, [s:attrs.italic])
 
 call s:h('DraculaError', s:red, s:none, [], s:red)
@@ -338,10 +339,13 @@ if has('nvim-0.5')
   " Treesitter
   hi! link TSPunctSpecial Special
   hi! link TSDefinition CursorLine
-  hi! link TSDefinitionUsage CursorLine
+  " hi! link TSDefinitionUsage CursorLine
   hi! link TSPunctDelimiter DraculaPink
+  hi! link TSPunctSpecial DraculaPink
+  hi! link TSOperator DraculaPink
   " # Constants
   hi! link TSConstMacro Macro
+  hi! link TSStringRegex DraculaCyan
   hi! link TSStringEscape Character
   hi! link TSSymbol DraculaPurple
   hi! link TSAnnotation DraculaYellow
@@ -352,10 +356,10 @@ if has('nvim-0.5')
   hi! link TSParameter DraculaOrangeItalic
   hi! link TSParameterReference DraculaOrange
   hi! link TSField DraculaOrange
-  hi! link TSConstructor DraculaCyan
   " # Keywords
   hi! link TSLabel DraculaPurpleItalic
-  hi! link TSTagAttribute DraculaOrange
+  hi! link TSTagAttribute DraculaGreenItalic
+  hi! link TSField DraculaOrange
   " # Variable
   hi! link TSVariableBuiltin DraculaPurpleItalic
   " # Text
@@ -364,15 +368,16 @@ if has('nvim-0.5')
   hi! link TSUnderline Underlined
   hi! link TSTitle DraculaYellow
   hi! link TSLiteral DraculaYellow
-  hi! link TSURI DraculaYellow
+  hi! link TSURI DraculaYellowUnderline
   hi! link TSNote DraculaWarning
   hi! link TSWarning DraculaNote
   hi! link TSDanger DraculaDanger
+  hi! link TSConstructor DraculaCyan
   " # Language specific
-  hi! link tomlTSProperty DraculaOrange
-  hi! link cssTSProperty DraculaOrange
+  hi! link tomlTSProperty DraculaOrangeItalic
+  hi! link cssTSProperty DraculaOrangeItalic
   " # Context
-  hi! link TreesitterContext DraculaBgLighter
+  " hi! link TreesitterContext DraculaBgLighter
   " # Vim-sandwich
   hi! OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
 	hi! OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
