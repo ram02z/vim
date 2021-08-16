@@ -373,6 +373,7 @@ if has('nvim-0.5')
   hi! link TSWarning DraculaNote
   hi! link TSDanger DraculaDanger
   hi! link TSConstructor DraculaCyan
+  hi! link TSPunctBracket DraculaCyan
   " # Language specific
   hi! link tomlTSProperty DraculaOrangeItalic
   hi! link cssTSProperty DraculaOrangeItalic
