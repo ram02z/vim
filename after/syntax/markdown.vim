@@ -1,7 +1,3 @@
-if dracula#should_abort('markdown', 'mkd')
-    finish
-endif
-
 if b:current_syntax ==# 'mkd'
 " plasticboy/vim-markdown {{{1
   hi! link htmlBold       DraculaOrangeBold
