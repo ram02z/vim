@@ -243,7 +243,7 @@ hi! link IndentBlanklineContextChar Comment
 " hi! link BufferlinePickSelected DraculaRed
 " hi! link BufferlinePickVisible DraculaRed
 " Hop.nvim
-hi! link HopUnmatched DraculaSubtle
+" hi! link HopUnmatched DraculaSubtle
 " Telescope.nvim
 hi! link TelescopeBorder FloatBorder
 hi! link TelescopePromptPrefix DraculaPurple
