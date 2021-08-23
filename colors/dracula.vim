@@ -80,7 +80,8 @@ highlight DraculaDiffText guifg=#181A26 ctermfg=236 guibg=#FFB86C ctermbg=215 gu
 highlight DraculaDiffDelete guifg=#FF5555 ctermfg=203 guibg=NONE ctermbg=235 gui=NONE cterm=NONE guisp=NONE
 
 " Required as some plugins will overwrite
-highlight Normal guifg=#F8F8F2 ctermfg=253 guibg=#282A36 ctermbg=236 gui=NONE cterm=NONE guisp=NONE
+highlight Normal guifg=#F8F8F2 ctermfg=253 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
+highlight NormalBg guifg=#F8F8F2 ctermfg=253 guibg=#282A36 ctermbg=236 gui=NONE cterm=NONE guisp=NONE
 highlight StatusLine guifg=NONE ctermfg=NONE guibg=#21222C ctermbg=235 gui=bold cterm=bold guisp=NONE
 highlight StatusLineNC guifg=NONE ctermfg=NONE guibg=#21222C ctermbg=235 gui=NONE cterm=NONE guisp=NONE
 highlight StatusLineTerm guifg=NONE ctermfg=NONE guibg=#21222C ctermbg=235 gui=bold cterm=bold guisp=NONE
@@ -115,7 +116,7 @@ hi! link Search       DraculaSearch
 hi! link SignColumn   DraculaComment
 hi! link TabLine      DraculaBoundary
 hi! link TabLineFill  DraculaBgDarker
-hi! link TabLineSel   Normal
+hi! link TabLineSel   NormalBg
 hi! link Title        DraculaGreenBold
 hi! link VertSplit    DraculaBoundary
 hi! link Visual       DraculaSelection
