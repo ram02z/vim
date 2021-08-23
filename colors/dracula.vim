@@ -245,6 +245,7 @@ hi! link IndentBlanklineContextChar Comment
 hi! link HopUnmatched DraculaSubtle
 " Telescope.nvim
 hi! link TelescopeBorder FloatBorder
+hi! link TelescopePromptPrefix DraculaPurple
 " # Vim-sandwich
 hi! OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
 hi! OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
