@@ -155,13 +155,13 @@ hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
+hi! link Identifier DraculaOrange
 hi! link Function DraculaGreen
 
 hi! link Statement DraculaPink
 hi! link Conditional DraculaPink
 hi! link Repeat DraculaPink
-hi! link Label DraculaPink
+hi! link Label DraculaPurpleItalic
 hi! link Operator DraculaPink
 hi! link Keyword DraculaPink
 hi! link Exception DraculaPink
@@ -177,7 +177,7 @@ hi! link Typedef DraculaPink
 
 hi! link Type DraculaCyanItalic
 
-hi! link Delimiter DraculaFg
+hi! link Delimiter DraculaPink
 
 hi! link Special DraculaPink
 hi! link SpecialComment DraculaCyanItalic
@@ -187,6 +187,49 @@ hi! link helpCommand DraculaPurple
 hi! link helpExample DraculaGreen
 hi! link helpBacktick Special
 
+" Treesitter
+hi! link TSPunctSpecial Special
+hi! link TSDefinition CursorLine
+" hi! link TSDefinitionUsage CursorLine
+" hi! link TSPunctDelimiter DraculaPink
+" hi! link TSPunctSpecial DraculaPink
+hi! link TSOperator DraculaPink
+" # Constants
+" hi! link TSConstMacro Macro
+" hi! link TSStringRegex DraculaCyan
+" hi! link TSStringEscape Character
+hi! link TSSymbol DraculaPurple
+hi! link TSAnnotation DraculaYellow
+hi! link TSAttribute DraculaGreenItalic
+" # Functions
+hi! link TSFuncBuiltin DraculaCyan
+hi! link TSFuncMacro Function
+" hi! link TSParameter DraculaOrangeItalic
+hi! link TSParameterReference DraculaOrangeItalic
+" hi! link TSField DraculaOrange
+" # Keywords
+" hi! link TSLabel DraculaPurpleItalic
+hi! link TSTagAttribute DraculaGreenItalic
+" hi! link TSField DraculaOrange
+" # Variable
+hi! link TSVariableBuiltin DraculaPurpleItalic
+" # Text
+" hi! link TSStrong DraculaFgBold
+" hi! link TSEmphasis DraculaFg
+" hi! link TSUnderline Underlined
+hi! link TSTitle DraculaYellow
+" hi! link TSLiteral DraculaYellow
+" hi! link TSURI DraculaYellowUnderline
+hi! link TSNote DraculaWarning
+hi! link TSWarning DraculaNote
+hi! link TSDanger DraculaDanger
+hi! link TSConstructor DraculaCyan
+hi! link TSPunctBracket DraculaCyan
+" # Language specific
+hi! link tomlTSProperty DraculaOrangeItalic
+hi! link cssTSProperty DraculaOrangeItalic
+
+" # My plugins
 " IndentLine.nvim
 hi! link IndentBlanklineContextChar Comment
 " Gitsigns
@@ -202,49 +245,6 @@ hi! link IndentBlanklineContextChar Comment
 hi! link HopUnmatched DraculaSubtle
 " Telescope.nvim
 hi! link TelescopeBorder FloatBorder
-" Treesitter
-hi! link TSPunctSpecial Special
-hi! link TSDefinition CursorLine
-" hi! link TSDefinitionUsage CursorLine
-hi! link TSPunctDelimiter DraculaPink
-hi! link TSPunctSpecial DraculaPink
-hi! link TSOperator DraculaPink
-" # Constants
-hi! link TSConstMacro Macro
-hi! link TSStringRegex DraculaCyan
-hi! link TSStringEscape Character
-hi! link TSSymbol DraculaPurple
-hi! link TSAnnotation DraculaYellow
-hi! link TSAttribute DraculaGreenItalic
-" # Functions
-hi! link TSFuncBuiltin DraculaCyan
-hi! link TSFuncMacro Function
-hi! link TSParameter DraculaOrangeItalic
-hi! link TSParameterReference DraculaOrange
-hi! link TSField DraculaOrange
-" # Keywords
-hi! link TSLabel DraculaPurpleItalic
-hi! link TSTagAttribute DraculaGreenItalic
-hi! link TSField DraculaOrange
-" # Variable
-hi! link TSVariableBuiltin DraculaPurpleItalic
-" # Text
-hi! link TSStrong DraculaFgBold
-hi! link TSEmphasis DraculaFg
-hi! link TSUnderline Underlined
-hi! link TSTitle DraculaYellow
-hi! link TSLiteral DraculaYellow
-hi! link TSURI DraculaYellowUnderline
-hi! link TSNote DraculaWarning
-hi! link TSWarning DraculaNote
-hi! link TSDanger DraculaDanger
-hi! link TSConstructor DraculaCyan
-hi! link TSPunctBracket DraculaCyan
-" # Language specific
-hi! link tomlTSProperty DraculaOrangeItalic
-hi! link cssTSProperty DraculaOrangeItalic
-" # Context
-" hi! link TreesitterContext DraculaBgLighter
 " # Vim-sandwich
 hi! OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
 hi! OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
