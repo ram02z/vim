@@ -88,6 +88,7 @@ highlight StatusLineTerm guifg=NONE ctermfg=NONE guibg=#21222C ctermbg=235 gui=b
 highlight StatusLineTermNC guifg=NONE ctermfg=NONE guibg=#21222C ctermbg=235 gui=NONE cterm=NONE guisp=NONE
 highlight WildMenu guifg=#181A26 ctermfg=236 guibg=#BD93F9 ctermbg=141 gui=bold cterm=bold guisp=NONE
 highlight CursorLine guifg=NONE ctermfg=NONE guibg=#424450 ctermbg=238 gui=NONE cterm=NONE guisp=NONE
+highlight BlackOnPink guifg=#21222C ctermfg=235 guibg=#FF79C6 ctermbg=212 gui=NONE cterm=NONE guisp=NONE
 
 hi! link ColorColumn  DraculaBgLight
 hi! link CursorColumn CursorLine
