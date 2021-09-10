@@ -64,8 +64,11 @@ highlight DraculaYellowUnderline guifg=#F1FA8C ctermfg=228 guibg=NONE ctermbg=NO
 highlight DraculaYellowItalic guifg=#F1FA8C ctermfg=228 guibg=NONE ctermbg=NONE gui=italic cterm=italic guisp=NONE
 
 highlight DraculaError guifg=#FF5555 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE guisp=#FF5555
+highlight DraculaErrorBg guifg=#FF5555 ctermfg=203 guibg=#4C313B ctermbg=NONE gui=NONE cterm=NONE
 highlight DraculaErrorLine guifg=#FF5555 ctermfg=203 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#FF5555
+highlight DraculaWarnBg guifg=#FFB86C ctermfg=215 guibg=#4C423F ctermbg=NONE gui=NONE cterm=NONE
 highlight DraculaWarnLine guifg=#FFB86C ctermfg=215 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#FFB86C
+highlight DraculaInfoBg guifg=#8BE9FD ctermfg=117 guibg=#394A57 ctermbg=NONE gui=NONE cterm=NONE
 highlight DraculaInfoLine guifg=#8BE9FD ctermfg=117 guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#8BE9FD
 
 highlight DraculaNote guifg=#8BE9FD ctermfg=117 guibg=NONE ctermbg=NONE gui=bold,inverse cterm=bold,inverse guisp=NONE
@@ -75,9 +78,10 @@ highlight DraculaSearch guifg=#50FA7B ctermfg=84 guibg=NONE ctermbg=NONE gui=inv
 highlight DraculaBoundary guifg=#6272A4 ctermfg=61 guibg=#21222C ctermbg=235 gui=NONE cterm=NONE guisp=NONE
 highlight DraculaLink guifg=#8BE9FD ctermfg=117 guibg=NONE ctermbg=NONE gui=underline cterm=underline guisp=NONE
 
-highlight DraculaDiffChange guifg=#FFB86C ctermfg=215 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
-highlight DraculaDiffText guifg=#181A26 ctermfg=236 guibg=#FFB86C ctermbg=215 gui=NONE cterm=NONE guisp=NONE
-highlight DraculaDiffDelete guifg=#FF5555 ctermfg=203 guibg=NONE ctermbg=235 gui=NONE cterm=NONE guisp=NONE
+highlight DraculaDiffAdd guifg=NONE ctermfg=215 guibg=#2F4D42 ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
+highlight DraculaDiffChange guifg=NONE ctermfg=215 guibg=#4C423F ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
+highlight DraculaDiffText guifg=#FFB86C ctermfg=215 guibg=#4C423F ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
+highlight DraculaDiffDelete guifg=NONE ctermfg=203 guibg=#4C313B ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
 
 " Required as some plugins will overwrite
 highlight Normal guifg=#F8F8F2 ctermfg=253 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
@@ -89,15 +93,16 @@ highlight StatusLineTermNC guifg=NONE ctermfg=NONE guibg=#21222C ctermbg=235 gui
 highlight WildMenu guifg=#181A26 ctermfg=236 guibg=#BD93F9 ctermbg=141 gui=bold cterm=bold guisp=NONE
 highlight CursorLine guifg=NONE ctermfg=NONE guibg=#424450 ctermbg=238 gui=NONE cterm=NONE guisp=NONE
 highlight BlackOnPink guifg=#21222C ctermfg=235 guibg=#FF79C6 ctermbg=212 gui=NONE cterm=NONE guisp=NONE
+highlight DiffDelete guifg=NONE ctermfg=203 guibg=#4C313B ctermbg=NONE gui=NONE cterm=NONE guisp=NONE
 
 hi! link ColorColumn  DraculaBgLight
 hi! link CursorColumn CursorLine
 hi! link CursorLineNr DraculaYellow
-hi! link DiffAdd      DraculaGreen
-hi! link DiffAdded    DiffAdd
+hi! link DiffAdd      DraculaDiffAdd
+hi! link DiffAdded    DraculaGreen
 hi! link DiffChange   DraculaDiffChange
-hi! link DiffDelete   DraculaDiffDelete
-hi! link DiffRemoved  DiffDelete
+hi! link DiffChanged  DraculaOrange
+hi! link DiffRemoved  DraculaRed
 hi! link DiffText     DraculaDiffText
 hi! link Directory    DraculaPurpleBold
 hi! link ErrorMsg     DraculaRedInverse
@@ -135,6 +140,10 @@ hi! link LspDiagnosticsDefaultInformation DraculaCyan
 hi! link LspDiagnosticsDefaultHint DraculaCyan
 hi! link LspDiagnosticsDefaultError DraculaError
 hi! link LspDiagnosticsDefaultWarning DraculaOrange
+hi! link LspDiagnosticsVirtualTextInformation DraculaInfoBg
+hi! link LspDiagnosticsVirtualTextHint DraculaInfoBg
+hi! link LspDiagnosticsVirtualTextError DraculaErrorBg
+hi! link LspDiagnosticsVirtualTextWarning DraculaWarningBg
 hi! link LspDiagnosticsUnderlineError DraculaErrorLine
 hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
 hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
@@ -235,9 +244,9 @@ hi! link cssTSProperty DraculaOrangeItalic
 " IndentLine.nvim
 hi! link IndentBlanklineContextChar Comment
 " Gitsigns
-" hi! link GitSignsAdd      DiffAdd
-" hi! link GitSignsChange   DiffChange
-" hi! link GitSignsDelete   DiffDelete
+hi! link GitSignsAdd      DraculaGreen
+hi! link GitSignsChange   DraculaOrange
+hi! link GitSignsDelete   DraculaRed
 
 " Nvim-bufferline.lua (don't get loaded when lazy)
 " hi! link BufferLineIndicatorSelected DraculaPink
@@ -249,12 +258,13 @@ hi! link IndentBlanklineContextChar Comment
 hi! link TelescopeBorder FloatBorder
 hi! link TelescopePromptPrefix DraculaPurple
 " # Vim-sandwich
-hi! OperatorSandwichBuns guifg='#aa91a0' gui=underline ctermfg=172 cterm=underline
-hi! OperatorSandwichChange guifg='#F8D97C' gui=underline ctermfg=yellow cterm=underline
-hi! OperatorSandwichAdd guibg='#50fa7b' gui=none ctermbg=green cterm=none
-hi! OperatorSandwichDelete guibg='#ff5555' gui=none ctermbg=red cterm=none
+hi! OperatorSandwichBuns guifg=#AA91A0 gui=underline ctermfg=172 cterm=underline
+hi! OperatorSandwichChange guifg=#F8D97C gui=underline ctermfg=yellow cterm=underline
+hi! link OperatorSandwichAdd DraculaGreen
+hi! link OperatorSandwichDelete DraculaError
+
 " # Clever-f
-hi! CleverFDefaultLabel guifg='#ff007c' guibg=NONE gui=bold ctermfg=162 cterm=NONE
+hi! CleverFDefaultLabel guifg=#FF007C guibg=NONE gui=bold ctermfg=162 cterm=NONE
 " # vim-matchup
 " hi! link MatchParenCur Comment
 hi! link MatchWord CursorLine
